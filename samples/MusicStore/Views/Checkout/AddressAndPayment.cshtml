@@ -27,6 +27,9 @@
         <div class="editor-field">
             @Html.TextBox("PromoCode")
         </div>
+        <div>
+            @await Component.InvokeAsync("SBPayment")
+        </div>
     </fieldset>
 
     <input type="submit" value="Submit Order" />

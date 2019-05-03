@@ -11,6 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Scripts\SBPayment\base64.js" />
+    <Content Remove="wwwroot\Scripts\SBPayment\md5.js" />
+    <Content Remove="wwwroot\Scripts\SBPayment\sha1.js" />
+    <Content Remove="wwwroot\Scripts\SBPayment\utf8.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Scripts\SBPayment\base64.js" />
+    <None Include="wwwroot\Scripts\SBPayment\md5.js" />
+    <None Include="wwwroot\Scripts\SBPayment\sha1.js" />
+    <None Include="wwwroot\Scripts\SBPayment\utf8.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="ForTesting\**\*" CopyToPublishDirectory="Never" Condition=" '$(PublishForTesting)' != 'true' " />
   </ItemGroup>
 
@@ -41,6 +55,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(MicrosoftEntityFrameworkCoreSqlServerPackageVersion)" />
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="$(MicrosoftExtensionsConfigurationCommandLinePackageVersion)" />
     <PackageReference Include="Microsoft.NET.Sdk.Razor" Version="$(MicrosoftNETSdkRazorPackageVersion)" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\Components\SBPayment\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
   <Target Name="VerifyPrecompiledViews" AfterTargets="Publish">
