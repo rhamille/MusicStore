@@ -1,11 +1,9 @@
 ﻿<div id="dai">
 
-
-
     <script type="text/javascript">
         <!--
 
-        		var set=0;
+        var set=0;
 
 		function f_submit() {
 
@@ -37,10 +35,10 @@
 			order.camp_type             = "";
 			order.tracking_id           = "";
 			order.terminal_type         = "0";
-            order.success_url = "http://localhost/MerchantPaySuccess";
-            order.cancel_url = "http://localhost/MerchantPayCancel";
-            order.error_url = "http://localhost/MerchantPayError";
-            order.pagecon_url = "http://localhost/MerchantPayResultRecieveSuccess";
+            order.success_url           = "http://localhost/MerchantPaySuccess";
+            order.cancel_url            = "http://localhost/MerchantPayCancel";
+            order.error_url             = "http://localhost/MerchantPayError";
+            order.pagecon_url           = "http://localhost/MerchantPayResultRecieveSuccess";
 			order.free1                 = "";
 			order.free2                 = "";
 			order.free3                 = "";
@@ -211,7 +209,8 @@
 			form.append($('<input>',{type:'submit',value: 'submit'}));
 
 			form.submit();
-		}
+		}
+
 
         // -->
 
@@ -499,6 +498,29 @@
                             <div style="clear:both;"></div>
                         </td>
                     </tr>
+
+
+                    <tr bgcolor="#EFEFEF">
+                        <th class="param_left">free_csv</th>
+                        <td class="param_right">
+                            <input name="free_csv" type="text" class="param_size" size="30" value="" id="free_csv" />
+                        </td>
+                    </tr>
+
+                    <tr bgcolor="#EFEFEF">
+                        <th class="param_left">test1</th>
+                        <td class="param_right">
+                            <input name="test1" type="text" class="param_size" size="30" value="" id="test1" />
+                        </td>
+                    </tr>
+
+                    
+                    <tr bgcolor="#EFEFEF">
+                        <th class="param_left">test2</th>
+                        <td class="param_right">
+                            <input name="test2" type="text" class="param_size" size="30" value="" id="test2" />
+                        </td>
+                    </tr>
                 </table>
 
                 @*<div id="reload_button">
@@ -528,4 +550,4 @@
 
     </div><!--/#contents_area-->
 
-
+</div>
