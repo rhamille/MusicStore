@@ -6,3 +6,7 @@
 /// <reference path="../wwwroot/Scripts/jquery-2.0.3.js" />
 /// <reference path="../wwwroot/Scripts/modernizr-2.6.2.js" />
 /// <reference path="../wwwroot/Scripts/respond.js" />
+/// <reference path="../wwwroot/Scripts/SBPayment/base64.js" />
+/// <reference path="../wwwroot/Scripts/SBPayment/md5.js" />
+/// <reference path="../wwwroot/Scripts/SBPayment/sha1.js" />
+/// <reference path="../wwwroot/Scripts/SBPayment/utf8.js" />

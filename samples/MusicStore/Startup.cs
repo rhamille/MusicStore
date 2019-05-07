@@ -25,6 +25,7 @@ namespace MusicStore
             var builder = new ConfigurationBuilder()
                 .SetBasePath(hostingEnvironment.ContentRootPath)
                 .AddJsonFile("config.json")
+                .AddJsonFile($"config.{hostingEnvironment.EnvironmentName}.json")
                 //All environment variables in the process's context flow in as configuration values.
                 .AddEnvironmentVariables();
 
@@ -173,7 +174,7 @@ namespace MusicStore
         public void Configure(IApplicationBuilder app)
         {
             // force the en-US culture, so that the app behaves the same even on machines with different default culture
-            var supportedCultures = new[] { new CultureInfo("en-US") };
+            var supportedCultures = new[] { new CultureInfo("en-US"), new CultureInfo("en-GB") };
 
             app.UseRequestLocalization(new RequestLocalizationOptions
             {
