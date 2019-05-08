@@ -33,7 +33,7 @@
 			order.div_settele           = "";
 			order.last_charge_month     = "";
 			order.camp_type             = "";
-			order.tracking_id           = "";
+			order.tracking_id           = "@{ @Guid.NewGuid().ToString().ToLower().Replace("-", ""); }";
 			order.terminal_type         = "0";
             order.success_url           = "http://localhost/MerchantPaySuccess";
             order.cancel_url            = "http://localhost/MerchantPayCancel";
