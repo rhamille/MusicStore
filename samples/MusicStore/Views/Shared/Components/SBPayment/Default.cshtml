@@ -140,9 +140,12 @@
 
 		// 日時の取得
 		function getYYYYMMDDHHMMSS(){
-			var now = new Date();
-			return now.getFullYear() + zeroPadding(now.getMonth() + 1) + zeroPadding(now.getDate()) +
-			       zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
+			var now = new Date(new Date().toLocaleString('ja', { timeZone: "Japan" }));
+            var jst = now.getFullYear() + zeroPadding(now.getMonth() + 1) + zeroPadding(now.getDate()) +
+                zeroPadding(now.getHours()) + zeroPadding(now.getMinutes()) + zeroPadding(now.getSeconds());
+            //alert(jst);
+			
+            return jst;
 		}
 
 		function zeroPadding(num) {
