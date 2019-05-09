@@ -24,7 +24,7 @@
 			order.order_id              = "@{ @Guid.NewGuid().ToString().ToLower().Replace("-", ""); }"; //"5a86a68cc7caebb2510bb39d5358ed3a";
 			order.item_id               = "T_0003";
 			order.pay_item_id           = "";
-			order.item_name             = "テスト商品";
+			order.item_name             = "sitecore test item_name " + getYYYYMMDDHHMMSS();
 			order.tax                   = "";
 			order.amount                = "1";
 			order.pay_type              = "0";
@@ -33,7 +33,7 @@
 			order.div_settele           = "";
 			order.last_charge_month     = "";
 			order.camp_type             = "";
-			order.tracking_id           = "@{ @Guid.NewGuid().ToString().ToLower().Replace("-", ""); }";
+			order.tracking_id           = "";
 			order.terminal_type         = "0";
             order.success_url           = "http://localhost/MerchantPaySuccess";
             order.cancel_url            = "http://localhost/MerchantPayCancel";
@@ -50,7 +50,7 @@
 			var orderDetail = new OrderDetail();
 			orderDetail.dtl_rowno       = "1";
 			orderDetail.dtl_item_id     = "dtlItem_1";
-			orderDetail.dtl_item_name   = "明細商品名1";
+			orderDetail.dtl_item_name   = "sitecore test dtl_item_name " + getYYYYMMDDHHMMSS();
 			orderDetail.dtl_item_count  = "1";
 			orderDetail.dtl_tax         = "1";
 			orderDetail.dtl_amount      = "1";
